@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive 3D Tag Cloud</title>
+
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(circle, #050505, #000000);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #00ffff;
+    letter-spacing: 1px;
+  }
+
+  canvas {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    background: rgba(0,0,0,0.4);
+  }
+
+  /* Hide tag source list */
+  #taglist {
+    display: none;
+  }
+
+  #taglist a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🌐 Interactive 3D Tech Tag Cloud</h1>
+
+<canvas id="cloudCanvas" width="650" height="650"></canvas>
+
+<!-- TAG SOURCE -->
+<div id="taglist">
+  <a href="#" style="font-size:34px;">AI</a>
+  <a href="#" style="font-size:28px;">AOSP</a>
+  <a href="#" style="font-size:30px;">C++</a>
+  <a href="#" style="font-size:24px;">Python</a>
+  <a href="#" style="font-size:22px;">Linux</a>
+  <a href="#" style="font-size:26px;">Android</a>
+  <a href="#" style="font-size:20px;">Cloud</a>
+  <a href="#" style="font-size:18px;">IoT</a>
+  <a href="#" style="font-size:16px;">Robotics</a>
+  <a href="#" style="font-size:21px;">GPU</a>
+  <a href="#" style="font-size:19px;">ARM</a>
+  <a href="#" style="font-size:17px;">RISC-V</a>
+  <a href="#" style="font-size:15px;">FPGA</a>
+  <a href="#" style="font-size:23px;">Cybersecurity</a>
+  <a href="#" style="font-size:25px;">Electronics</a>
+  <a href="#" style="font-size:14px;">Kernel</a>
+  <a href="#" style="font-size:16px;">Embedded</a>
+  <a href="#" style="font-size:18px;">Networking</a>
+  <a href="#" style="font-size:13px;">Blockchain</a>
+  <a href="#" style="font-size:19px;">Quantum</a>
+  <a href="#" style="font-size:12px;">DevOps</a>
+  <a href="#" style="font-size:14px;">Microchips</a>
+  <a href="#" style="font-size:20px;">Data Science</a>
+  <a href="#" style="font-size:15px;">Machine Learning</a>
+</div>
+
+<!-- TAGCANVAS LIBRARY -->
+<script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+
+<!-- INITIALIZATION -->
+<script>
+window.onload = function () {
+  try {
+    TagCanvas.Start('cloudCanvas', 'taglist', {
+      textColour: '#00ffff',
+      outlineColour: '#ff00ff',
+      outlineThickness: 2,
+      reverse: true,
+      depth: 0.9,
+      maxSpeed: 0.06,
+      minSpeed: 0.01,
+      weight: true,
+      weightMode: 'size',
+      shape: 'sphere',
+      zoom: 1,
+      wheelZoom: true,
+      shadow: '#000',
+      shadowBlur: 6,
+      freezeActive: true,
+      frontSelect: true,
+      initial: [0.03, -0.02],
+      pulsateTo: 0.9
+    });
+  } catch (e) {
+    console.error("TagCanvas failed:", e);
+  }
+};
+</script>
+
+</body>
+</html>

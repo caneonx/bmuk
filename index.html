@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridge Momentum UK</title>
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0d6efd;
+  --secondary:#20c997;
+  --dark:#0b1220;
+}
+
+body{scroll-behavior:smooth;background:#f8fafc;}
+
+.navbar{
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,0.85)!important;
+}
+
+.hero{
+  background: linear-gradient(135deg,rgba(13,110,253,.95),rgba(32,201,151,.95)),
+              url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:160px 0 120px 0;
+  position:relative;
+}
+
+.glass{
+  background:rgba(255,255,255,0.88);
+  backdrop-filter: blur(12px);
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.card-pro{
+  transition:.35s ease;
+}
+.card-pro:hover{
+  transform:translateY(-10px) scale(1.01);
+  box-shadow:0 35px 80px rgba(0,0,0,.12);
+}
+
+.icon-xl{
+  font-size:2.8rem;
+  color:var(--primary);
+}
+
+.section-title{
+  font-weight:800;
+  letter-spacing:.6px;
+}
+
+.counter{
+  font-size:3rem;
+  font-weight:800;
+  color:var(--primary);
+}
+
+.timeline{
+  position:relative;
+  padding-left:30px;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:5px;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(var(--primary),var(--secondary));
+  border-radius:10px;
+}
+
+.timeline-item{
+  margin-bottom:30px;
+  position:relative;
+}
+.timeline-item::before{
+  content:'';
+  position:absolute;
+  left:-32px;
+  top:5px;
+  width:16px;
+  height:16px;
+  background:var(--primary);
+  border-radius:50%;
+}
+
+footer{
+  background:var(--dark);
+  color:#9ca3af;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+<div class="container">
+  <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+    <img src="assets/logo.png" height="40" class="me-2">
+    Bridge Momentum UK
+  </a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+      <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+      <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+      <li class="nav-item"><a class="nav-link" href="#governance">Governance</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary ms-lg-3">Join Us</a>
+  </div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+<div class="container">
+  <img src="assets/logo.png" height="90" class="mb-4">
+  <h1 class="display-4 fw-bold mb-3">Empowering Communities,<br>Creating Momentum</h1>
+  <p class="lead mb-4">
+    Building bridges between opportunity, support, and people across the UK.
+  </p>
+  <a href="#programs" class="btn btn-light btn-lg me-2">Our Programs</a>
+  <a href="#contact" class="btn btn-outline-light btn-lg">Get Involved</a>
+</div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="py-5">
+<div class="container">
+<div class="row g-4 align-items-center">
+<div class="col-md-6">
+<h2 class="section-title">Our Mission</h2>
+<p class="fs-5 text-muted">
+Bridge Momentum UK exists to connect communities with opportunity, education, and empowerment.
+</p>
+<p class="text-muted">
+We focus on sustainable social impact, long-term growth, and human dignity.
+</p>
+</div>
+<div class="col-md-6">
+<div class="glass p-4">
+<div class="timeline">
+  <div class="timeline-item">
+    <h6 class="fw-bold">Foundation</h6>
+    <p class="text-muted small">Community-driven beginnings</p>
+  </div>
+  <div class="timeline-item">
+    <h6 class="fw-bold">Expansion</h6>
+    <p class="text-muted small">Education & empowerment programs</p>
+  </div>
+  <div class="timeline-item">
+    <h6 class="fw-bold">Future Vision</h6>
+    <p class="text-muted small">UK-wide community network</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="py-5 bg-light">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="section-title">Our Core Programs</h2>
+<p class="text-muted">Impact-driven initiatives</p>
+</div>
+
+<div class="row g-4">
+<div class="col-md-4">
+<div class="glass p-4 text-center card-pro h-100">
+<i class="bi bi-people icon-xl"></i>
+<h5 class="fw-bold mt-3">Community Support</h5>
+<p class="text-muted">Direct assistance, outreach, and social services.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass p-4 text-center card-pro h-100">
+<i class="bi bi-mortarboard icon-xl"></i>
+<h5 class="fw-bold mt-3">Education & Skills</h5>
+<p class="text-muted">Training, mentoring, and career development.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass p-4 text-center card-pro h-100">
+<i class="bi bi-graph-up-arrow icon-xl"></i>
+<h5 class="fw-bold mt-3">Empowerment</h5>
+<p class="text-muted">Leadership, entrepreneurship, independence.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<style>
+  .iframe-container {
+    display: flex;
+    /* Pushes content to the right side of the row */
+    justify-content: flex-end;
+    /* Keeps it centered vertically */
+    align-items: center;
+    min-height: 100vh;
+    /* Optional: Add padding so it doesn't touch the very edge of the screen */
+    padding-right: 90px;
+  }
+</style>
+
+<div class="iframe-container">
+  <iframe
+    src="cloud.html"
+    width="410"
+    height="410"
+    style="border:none;border-radius:16px;">
+  </iframe>
+</div>
+
+
+
+
+
+
+<style>
+  .iframe-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-left: 200px;
+    /* Remove the negative padding-top, it doesn't work! */
+  }
+
+  .iframe-left iframe {
+    margin-top: -500px; /* 👈 This will pull the iframe UP past the boundary */
+    border: none;
+    border-radius: 16px;
+  }
+</style>
+
+<div class="iframe-left">
+  <iframe
+    src="typerwrite_message.html"
+    width="410"
+    height="410">
+  </iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- IMPACT -->
+<section id="impact" class="py-5">
+<div class="container text-center">
+<h2 class="section-title mb-4">Our Impact</h2>
+<div class="row g-4">
+<div class="col-md-3"><div class="counter">500+</div><p>People Supported</p></div>
+<div class="col-md-3"><div class="counter">120+</div><p>Training Sessions</p></div>
+<div class="col-md-3"><div class="counter">30+</div><p>Projects</p></div>
+<div class="col-md-3"><div class="counter">10+</div><p>Partners</p></div>
+</div>
+</div>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance" class="py-5 bg-light">
+<div class="container">
+<div class="glass p-5">
+<h2 class="section-title mb-3">Governance & Transparency</h2>
+<ul class="text-muted">
+<li>Community Interest Company (CIC)</li>
+<li>Ethical governance structure</li>
+<li>Community accountability</li>
+<li>Transparent impact reporting</li>
+<li>Social value reinvestment</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+<div class="container">
+<div class="text-center mb-4">
+<h2 class="section-title">Contact Us</h2>
+<p class="text-muted">Let’s build momentum together.</p>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="glass p-4">
+<form>
+<input class="form-control mb-3" placeholder="Full Name">
+<input class="form-control mb-3" placeholder="Email">
+<textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+<button class="btn btn-primary w-100">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 text-center">
+<div class="container">
+<img src="assets/logo.png" height="50" class="mb-2">
+<p class="mb-1">© 2026 Bridge Momentum UK CIC</p>
+<p class="small">Manchester, United Kingdom</p>
+<div>
+<a href="#" class="text-secondary me-3"><i class="bi bi-facebook"></i></a>
+<a href="#" class="text-secondary me-3"><i class="bi bi-twitter"></i></a>
+<a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

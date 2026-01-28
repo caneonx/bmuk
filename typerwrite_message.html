@@ -1,0 +1,72 @@
+<!-- TYPEWRITER COMPONENT (ACCESSIBLE & ENCAPSULATED) -->
+<div class="tw-container">
+    <div class="tw-box">[ ............................ ]</div>
+</div>
+
+<style>
+/* COMPONENT WRAPPER */
+.tw-container {
+    width: 320px;                 /* initial size */
+    max-width: 700px;             /* expandable limit */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transition: width 0.25s ease;
+}
+
+/* TYPEWRITER BOX */
+.tw-box {
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+    min-height: 22px;
+    background: #f4f4f4;
+    border-radius: 6px;
+    color: #222;
+    display: inline-block;
+
+    /* static cursor (no flashing) */
+    border-right: 2px solid #007700;
+
+    /* long text handling */
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* No blinking animation — accessibility-first */
+</style>
+
+<script>
+(function() {
+    const text = "Community is our strength: together we rise, turning compassion into action and small acts into big impact—because every life matters and every smile counts, because unity creates hope, kindness builds bridges, and collective effort transforms challenges into opportunities, inspiring a world where solidarity, dignity, and humanity guide our future.";
+    const box = document.querySelector(".tw-box");
+    let index = 0;
+    let typing = false;
+
+    function type() {
+        if (index < text.length) {
+            box.textContent += text[index];
+            index++;
+            setTimeout(type, 40); // typing speed
+        }
+    }
+
+    box.addEventListener("mouseenter", function() {
+        if (!typing) {
+            typing = true;
+            box.textContent = "";
+            type();
+        }
+    });
+})();
+</script>

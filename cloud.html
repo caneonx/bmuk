@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #ffffff, #f2f4f8);
+    color: #111;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  canvas {
+    display: block;
+    margin: 10px auto;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  #taglist {
+    display: none;
+  }
+</style>
+
+<canvas id="cloudCanvas" width="380" height="380"></canvas>
+
+<div id="taglist">
+  <a href="#" style="font-size:22px;">HumanRights</a>
+  <a href="#" style="font-size:20px;">SocialJustice</a>
+  <a href="#" style="font-size:19px;">PovertyReduction</a>
+  <a href="#" style="font-size:21px;">HousingSupport</a>
+  <a href="#" style="font-size:18px;">MentalHealth</a>
+  <a href="#" style="font-size:16px;">Education</a>
+  <a href="#" style="font-size:15px;">Healthcare</a>
+  <a href="#" style="font-size:17px;">ChildProtection</a>
+  <a href="#" style="font-size:14px;">Employment</a>
+  <a href="#" style="font-size:13px;">FoodSecurity</a>
+  <a href="#" style="font-size:12px;">RefugeeSupport</a>
+  <a href="#" style="font-size:11px;">DisabilitySupport</a>
+  <a href="#" style="font-size:10px;">GenderEquality</a>
+  <a href="#" style="font-size:14px;">Inclusion</a>
+  <a href="#" style="font-size:13px;">Advocacy</a>
+  <a href="#" style="font-size:12px;">Sustainability</a>
+  <a href="#" style="font-size:15px;">CrisisSupport</a>
+  <a href="#" style="font-size:12px;">DigitalInclusion</a>
+</div>
+
+<script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+
+<script>
+window.onload = function () {
+  try {
+    TagCanvas.Start('cloudCanvas', 'taglist', {
+      textColour: '#1f2937',      // dark slate text
+      outlineColour: '#3b82f6',   // blue accent
+      outlineThickness: 1,
+      reverse: true,
+      depth: 0.75,
+      maxSpeed: 0.04,
+      minSpeed: 0.01,
+      weight: true,
+      weightMode: 'size',
+      shape: 'sphere',
+      zoom: 0.85,               // smaller sphere
+      wheelZoom: true,
+      shadow: '#000000',
+      shadowBlur: 2,
+      freezeActive: true,
+      frontSelect: true,
+      initial: [0.02, -0.02]
+    });
+  } catch (e) {
+    console.error("TagCanvas failed:", e);
+  }
+};
+</script>
+
+</html>
